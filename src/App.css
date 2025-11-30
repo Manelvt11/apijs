@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* LIGHT THEME (padrão) */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+  color: #111111;
+  transition: background 0.2s, color 0.2s;
+}
+
+.caixa-principal {
+  position: relative;
+  box-shadow: 0 0 12px #cdcdcd;
+  border-radius: 30px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.caixa-principal h1 {
+  position: absolute;
+  top: 60px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #111111;
+}
+
+input {
+  display: flex;
+  margin-top: 30px;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid #cfcfcf;
+  background: #ffffff;
+  color: #111111;
+  width: 320px;
+  outline: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+input::placeholder {
+  color: #999999;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background: #e0e0e0;
+  color: #111111;
+  transition: background 0.15s, transform 0.08s;
+}
+
+button:active { transform: translateY(1px); }
+
+.btn-adicionar {
+  position: absolute;
+  bottom: 70px;
+  left: 175px;
+  width: 150px;
+  background: #2d89ef;
+  color: #ffffff;
+}
+
+.btn-adicionar:hover{
+    opacity: 0.8;
+}
+
+.btn-tema {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  background: #333333;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+/* lista */
+ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 420px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ececec;
+  color: #111111;
+}
+
+ul li button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #ff4444;
+  color: #fff;
+}
+
+/* DARK THEME */
+body.dark {
+  background: #121212;
+  color: #e6e6e6;
+}
+
+body.dark .caixa-principal {
+  background: #1f1f1f;
+  box-shadow: 0 0 12px #5a5a5a;
+}
+
+body.dark .caixa-principal h1 {
+  color: #ffffff;
+}
+
+body.dark input {
+  background: #222226;
+  border: 1px solid #3a3a3a;
+  color: #e6e6e6;
+}
+
+body.dark input::placeholder {
+  color: #9a9a9a;
+}
+
+body.dark button {
+  background: #333333;
+  color: #e6e6e6;
+}
+
+body.dark .btn-adicionar {
+  background: #4c6cf0;
+  color: #ffffff;
+}
+
+body.dark .btn-tema {
+  background: #666666;
+  color: #ffffff;
+}
+
+body.dark ul li {
+  background: #222226;
+  border: 1px solid #2f2f2f;
+  color: #e6e6e6;
+}
+
+body.dark ul li button {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .caixa-principal {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .caixa-principal h1 {
+    position: static;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .btn-adicionar {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .btn-tema {
+    top: 10px;
+    right: 10px;
+    padding: 0.5rem 0.9rem;
+  }
+
+  ul {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .caixa-principal {
+    border-radius: 15px;
+  }
+
+  .caixa-principal h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn-tema {
+    font-size: 0.8rem;
+  }
+}
